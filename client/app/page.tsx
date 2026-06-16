@@ -11,6 +11,7 @@ export default function Home() {
   // const allTodos = await fetch("API", { cache: "force-cache" });
   const inputRef = useRef<HTMLInputElement | null>(null);
   const { todos, isLoading, error, mutate } = useTodos();
+  console.log("todos1AAAA", todos);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

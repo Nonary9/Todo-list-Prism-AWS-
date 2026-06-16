@@ -1,10 +1,12 @@
 import express from "express";
 import type { Express, Request, Response } from "express";
+import cors from "cors";
 import { PrismaClient } from "@prisma/client";
 
 const app: Express = express();
 const PORT = process.env.PORT || 8080;
 
+app.use(cors({ origin: "http://localhost:3000" }));
 app.use(express.json());
 
 const prisma = new PrismaClient();
